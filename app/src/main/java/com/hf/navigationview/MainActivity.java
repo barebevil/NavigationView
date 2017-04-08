@@ -63,6 +63,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         Snackbar.LENGTH_SHORT).show();
                 break;
         }
+        item.setChecked(true);
+        setTitle(item.getTitle());
         mDrawerLayout.closeDrawers();
         return true;
     }
