@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single"/>
+
+    <item
+        android:id="@+id/beer"
+        android:title="Beer"
+        android:icon="@drawable/ic_smilie">
+    </item>
+    <item
+        android:id="@+id/wine"
+        android:title="Wine"
+        android:icon="@drawable/ic_car">
+    </item>
+    <item
+        android:id="@+id/cocktail"
+        android:title="Cocktail"
+        android:icon="@drawable/ic_smilie">
+    </item>
+
+    <item
+        android:id="@+id/soft_drinks"
+        android:title="Soft Drinks"
+        android:icon="@drawable/ic_car">
+    </item>
+
+</menu>
