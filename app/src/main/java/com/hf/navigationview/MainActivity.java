@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 ft.replace(R.id.fragment_container, fragment);
                 ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 ft.commit();
-                Snackbar.make(mDrawerLayout, "You need more practice!",
+                Snackbar.make(mDrawerLayout, "Displays first fragment",
                         Snackbar.LENGTH_SHORT).show();
                 break;
             case R.id.option_2:
@@ -59,10 +59,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 ft.replace(R.id.fragment_container, fragment);
                 ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 ft.commit();
-                Snackbar.make(mDrawerLayout, "You need more practice!",
+                Snackbar.make(mDrawerLayout, "Displays second fragment",
                         Snackbar.LENGTH_SHORT).show();
                 break;
         }
+        mDrawerLayout.closeDrawers();
         return true;
     }
 
