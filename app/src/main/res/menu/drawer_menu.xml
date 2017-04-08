@@ -2,24 +2,30 @@
     <group android:checkableBehavior="single"/>
 
     <item
-        android:id="@+id/beer"
-        android:title="Beer"
+        android:id="@+id/option_1"
+        android:title="@string/first"
         android:icon="@drawable/ic_smilie">
     </item>
     <item
-        android:id="@+id/wine"
-        android:title="Wine"
+        android:id="@+id/option_2"
+        android:title="@string/second"
         android:icon="@drawable/ic_car">
     </item>
     <item
-        android:id="@+id/cocktail"
-        android:title="Cocktail"
+        android:id="@+id/option_3"
+        android:title="@string/third"
         android:icon="@drawable/ic_smilie">
     </item>
 
     <item
-        android:id="@+id/soft_drinks"
-        android:title="Soft Drinks"
+        android:id="@+id/option_4"
+        android:title="@string/fourth"
+        android:icon="@drawable/ic_car">
+    </item>
+
+    <item
+        android:id="@+id/option_5"
+        android:title="@string/fifth"
         android:icon="@drawable/ic_car">
     </item>
 
