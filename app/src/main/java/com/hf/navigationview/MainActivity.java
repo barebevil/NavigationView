@@ -1,25 +1,42 @@
 package com.hf.navigationview;
 
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mDrawerToggle;
+    private NavigationView mNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation);
+        mNavigationView = (NavigationView)findViewById(R.id.navigation);
+        mNavigationView.setNavigationItemSelectedListener(this);
+        NavigationView navigationView = (NavigationView)findViewById(R.id.navigation);
         navigationView.setItemIconTintList(null);
         initViews();
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.option_1:
+                Snackbar.make(mDrawerLayout, "Yummy",
+                        Snackbar.LENGTH_SHORT).show();
+                break;
+        }
+        return true;
     }
 
     private void initViews(){
