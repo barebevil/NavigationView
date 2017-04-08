@@ -1,8 +1,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single"/>
+
 
     <item android:title="Section 1">
           <menu>
+              <group android:checkableBehavior="single">
               <item
                   android:id="@+id/option_1"
                   android:title="@string/first"
@@ -13,6 +14,7 @@
                   android:title="@string/second"
                   android:icon="@drawable/ic_car">
               </item>
+              </group>
           </menu>
     </item>
 
