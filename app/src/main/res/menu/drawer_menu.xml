@@ -20,6 +20,7 @@
 
     <item android:title="Section 2">
         <menu>
+            <group android:checkableBehavior="single">
             <item
                 android:id="@+id/option_3"
                 android:title="@string/third"
@@ -36,6 +37,7 @@
                 android:title="@string/fifth"
                 android:icon="@drawable/ic_car">
             </item>
+            </group>
 
         </menu>
     </item>

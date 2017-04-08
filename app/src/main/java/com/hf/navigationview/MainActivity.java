@@ -1,7 +1,10 @@
 package com.hf.navigationview;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -36,16 +39,37 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         anim.setRepeatMode(Animation.REVERSE);
         anim.setRepeatCount(Animation.INFINITE);
         myText.startAnimation(anim);
+
     }
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+        Fragment fragment;
+//        Class fragmentClass;
         switch(item.getItemId()){
             case R.id.option_1:
-                Snackbar.make(mDrawerLayout, "You need more practice!",
+                fragment = new FragmentOne();
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_container, fragment);
+                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                ft.commit();
+                Snackbar.make(mDrawerLayout, "Yippee!",
                         Snackbar.LENGTH_SHORT).show();
                 break;
         }
+        switch(item.getItemId()){
+            case R.id.option_2:
+                fragment = new FragmentTwo();
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_container, fragment);
+                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+                ft.commit();
+                Snackbar.make(mDrawerLayout, "Woohoo!",
+                        Snackbar.LENGTH_SHORT).show();
+                break;
+        }
+
+
         return true;
     }
 
