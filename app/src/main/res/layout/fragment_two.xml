@@ -11,4 +11,10 @@
         android:text="@string/fragment_2"
         android:background="@color/frag_2_bg_color"/>
 
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webview">
+    </WebView>
+
 </FrameLayout>
